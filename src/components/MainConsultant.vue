@@ -1,10 +1,17 @@
 <template>
-  <main></main>
+  <main>
+    <JumbotronConsultant />
+  </main>
 </template>
 
 <script>
+import JumbotronConsultant from './JumbotronConsultant.vue';
 export default {
-    name: 'MainConsultant'
+    name: 'MainConsultant',
+    components: {
+    JumbotronConsultant
+  }
+    
 }
 </script>
 
