@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(27, 27, 49);
+    // background-color: rgb(93, 93, 93);
 }
 
 .container{
@@ -15,4 +15,30 @@ body{
 
 .flex{
     display: flex;
+}
+
+.btn{
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    &:hover {
+        // filtro luminosità tipo;
+      }
+}
+
+.green-btn{
+    background-color: $green-color;
+    border: 1px solid $green-color;
+    color: white;
+    &:hover {
+        background-color: $green-color-hover;
+      }
+}
+
+.white-btn{
+    color: $green-color;
+    border: 1px solid $green-color;
+}
+
+p{
+    color: $grey-text;
 }

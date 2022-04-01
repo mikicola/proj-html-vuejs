@@ -26,7 +26,7 @@ export default {
       upperNavbarInfo: [
         {
           icon: "",
-          text: "Open Hours - Sat _ 9:00 - 18:00",
+          text: "Open Hours: Mon - Sat - 9:00 - 18:00",
         },
         {
           icon: "",
@@ -84,12 +84,13 @@ export default {
 @import "../assets/styles/partials/variables.scss";
   header{
     .upper-navbar{
-      background-color: $blu-primary-color;
+      background-color: $blue-primary-color;
       color: white;
       ul{
         padding: .5rem 0;
         li{
           margin-right: 1rem;
+          font-size: .8em;
         }
       }
     }
@@ -105,7 +106,7 @@ export default {
         margin-left: 1rem;
         height: 100%;
         a{
-          color: $blu-primary-color;
+          color: $blue-primary-color;
           text-decoration: none;
           &:hover {
             color: #2f4756;
