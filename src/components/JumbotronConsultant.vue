@@ -3,11 +3,11 @@
     <!-- <img src="../assets/img/bg-parallax.png" alt="jumbo"> -->
     <div class="jumbo-content">
       <div class="text container">
-        <h1>Ready <span>Team</span></h1>
+        <h1>Ready <span class="green-span">Team</span></h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequatur sit nulla nesciunt enim cum iure</p>
         <div class="btn-container">
           <a class="btn green-btn" href="#">get in touch</a>
-          <a class="btn white-btn" href="#">read more</a>
+          <a class="btn transparent-btn" href="#">read more</a>
         </div>
       </div>
     </div>
@@ -40,9 +40,9 @@ export default {
       transform: translate(-50%, -50%);
       h1{
         color: $blue-primary-color;
-        span{
-          color: $green-color;
-        }
+      }
+      p{
+        margin-top: 1rem;
       }
       .btn-container{
         margin-top: 3rem;

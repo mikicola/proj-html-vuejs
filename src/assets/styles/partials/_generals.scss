@@ -17,9 +17,17 @@ body{
     display: flex;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
 .btn{
     padding: .5rem 1rem;
     border-radius: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
     &:hover {
         // filtro luminosità tipo;
       }
@@ -34,11 +42,36 @@ body{
       }
 }
 
-.white-btn{
+.transparent-btn{
     color: $green-color;
     border: 1px solid $green-color;
 }
 
+.green-span{
+    color: $green-color;
+    background-color: $green-color-transparent;
+    padding: 0 .5rem;
+    border-radius: 3px;
+}
+
+small{
+    color: $small-title-color;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h1{
+    padding-top: 1rem;
+}
+
 p{
     color: $grey-text;
+}
+
+.padding-x-5{
+    padding: 5rem 0;
+}
+
+.padding-t-15{
+    padding-top: 1.5;
 }

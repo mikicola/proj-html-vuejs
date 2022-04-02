@@ -1,15 +1,22 @@
 <template>
   <main>
     <JumbotronConsultant />
+    <SectionExcellence />
+    <SectionCompany />
   </main>
 </template>
 
 <script>
 import JumbotronConsultant from './JumbotronConsultant.vue';
+import SectionExcellence from './SectionExcellence.vue';
+import SectionCompany from './SectionCompany.vue';
+
 export default {
     name: 'MainConsultant',
     components: {
-    JumbotronConsultant
+    JumbotronConsultant,
+    SectionExcellence,
+    SectionCompany,
   }
     
 }
