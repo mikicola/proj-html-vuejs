@@ -83,7 +83,11 @@ export default {
 <style  scoped lang="scss">
 @import "../assets/styles/partials/variables.scss";
   header{
+    width: 100%;
+    // position: fixed;
+    // z-index: 100;
     .upper-navbar{
+      width: 100%;
       background-color: $blue-primary-color;
       color: white;
       ul{
@@ -95,6 +99,7 @@ export default {
       }
     }
     .lower-navbar{
+      width: 100%;
       margin-top: 1rem;
       text-transform: uppercase;
       justify-content: space-between;

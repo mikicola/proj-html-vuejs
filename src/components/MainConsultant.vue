@@ -3,6 +3,9 @@
     <JumbotronConsultant />
     <SectionExcellence />
     <SectionCompany />
+    <SectionActionProjects />
+    <SectionNumbers />
+    <FormSection />
   </main>
 </template>
 
@@ -10,6 +13,9 @@
 import JumbotronConsultant from './JumbotronConsultant.vue';
 import SectionExcellence from './SectionExcellence.vue';
 import SectionCompany from './SectionCompany.vue';
+import SectionActionProjects from './SectionActionProjects.vue';
+import SectionNumbers from './SectionNumbers.vue';
+import FormSection from './FormSection.vue';
 
 export default {
     name: 'MainConsultant',
@@ -17,6 +23,9 @@ export default {
     JumbotronConsultant,
     SectionExcellence,
     SectionCompany,
+    SectionActionProjects,
+    SectionNumbers,
+    FormSection,
   }
     
 }

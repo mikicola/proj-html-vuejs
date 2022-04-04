@@ -1,7 +1,8 @@
 <template>
   <div class="jumbotron">
     <!-- <img src="../assets/img/bg-parallax.png" alt="jumbo"> -->
-    <div class="jumbo-content">
+    <div class="jumbo-content flex">
+      <img src="../assets/img/bg-parallax.png" alt="guys in business">
       <div class="text container">
         <h1>Ready <span class="green-span">Team</span></h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequatur sit nulla nesciunt enim cum iure</p>
@@ -23,15 +24,23 @@ export default {
 <style scoped lang="scss">
 @import "../assets/styles/partials/variables.scss";
 .jumbotron {
-  height: 500px;
+  height: 550px;
   .jumbo-content{
     height: 100%;
-    background-image: url(../assets/img/bg-parallax.png);
+    background-image: url(../assets/img/transparent-bg.png);
     overflow: hidden;
-    background-repeat: no-repeat;
     background-position: center;
-    width: 100%;
     position: relative;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    justify-content:center;
+    align-items:center;
+    img{
+      min-width: 180%;
+      // max-height: 100%;
+    }
     .text{
       text-align: center;
       position: absolute;
@@ -43,13 +52,15 @@ export default {
       }
       p{
         margin-top: 1rem;
+        max-width: 450px;
       }
       .btn-container{
         margin-top: 3rem;
         .btn{
           margin: 0 .5rem;
-          text-transform: uppercase;
-          text-decoration: none;
+        }
+        .transparent-btn:hover{
+          background-color: rgba(0, 0, 0, 0.08);
         }
       }
     }
