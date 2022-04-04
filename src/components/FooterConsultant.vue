@@ -14,10 +14,9 @@
         <ul id="about">
           <li class="li-title">About</li>
           <li><a href="">prova</a></li>
-          <li><a href="">prova</a></li>
-          <li><a href="">prova</a></li>
-          <li><a href="">prova</a></li>
-          <li><a href="">prova</a></li>
+          <li v-for="(aboutLink, index) in aboutLinks" :key="index">
+            <a :href="link.href">{{ link.text }}</a>
+          </li>
         </ul>
       </div>
 
@@ -25,6 +24,9 @@
         <ul id="services">
           <li class="li-title">Services</li>
           <li><a href="">prova</a></li>
+          <li v-for="(ServicestLink, index) in ServicestLinks" :key="index">
+            <a :href="link.href">{{ link.text }}</a>
+          </li>
         </ul>
       </div>
 
@@ -32,6 +34,9 @@
         <ul id="support">
           <li class="li-title">Support</li>
           <li><a href="">prova</a></li>
+          <li v-for="(supportLink, index) in supportLinks" :key="index">
+            <a :href="link.href">{{ link.text }}</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -74,10 +79,28 @@ footer {
     .card-foo {
       background-color: $footer-cards-bg-color;
       border-radius: 10px;
+      padding: 2rem;
+      ul {
+        .li-title{
+          font-weight: 700;
+          padding-bottom: 1rem;
+        }
+        li {
+          list-style: none;
+          a {
+            color: $light-grey-text;
+            text-decoration: none;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
     }
   }
   .footer-bottom {
     background-color: black;
+    font-size: .8em;
     justify-content: space-between;
     padding: 2rem 0;
   }

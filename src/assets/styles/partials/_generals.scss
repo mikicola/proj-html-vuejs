@@ -28,6 +28,7 @@ body{
     border-radius: 3px;
     text-decoration: none;
     text-transform: uppercase;
+    
     &:hover {
         // filtro luminosità tipo;
         // filter: brightness(120%);
@@ -71,7 +72,7 @@ h1{
 
 p{
     color: $grey-text;
-    // margin-top: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .padding-x-5{
