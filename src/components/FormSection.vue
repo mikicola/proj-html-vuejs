@@ -56,6 +56,9 @@ export default {
     span{
         display: block;
     }
+    .transparent-btn:hover{
+          background-color: rgba(0, 0, 0, 0.08);
+        }
   }
 }
 </style>

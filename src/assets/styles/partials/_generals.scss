@@ -46,6 +46,7 @@ body{
 .transparent-btn{
     color: $green-color;
     border: 1px solid $green-color;
+    background-color: transparent;
     &:hover {
         background-color: rgba(255, 255, 255, 0.080);
       }
