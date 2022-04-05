@@ -34,7 +34,6 @@
       <div class="column card-foo">
         <ul id="support">
           <li class="li-title">Support</li>
-          <li><a href="">prova</a></li>
           <li v-for="(supportLink, index) in supportLinks" :key="index">
             <a :href="supportLink.href">{{ supportLink.text }}</a>
           </li>
