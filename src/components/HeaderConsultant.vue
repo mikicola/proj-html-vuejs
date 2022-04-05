@@ -5,6 +5,16 @@
         <ul>
           <!-- TOFIX mancano icon -->
           <li v-for="(item, index) in upperNavbarInfo" :key="index">{{ item.text }}</li>
+
+          <!-- TOFIX da importare  -->
+          <!-- 
+          <font-awesome-icon icon="fa-solid fa-clock" />
+          <font-awesome-icon icon="fa-solid fa-phone" />
+          <font-awesome-icon icon="fa-solid fa-envelope" />
+          <font-awesome-icon icon="fa-brands fa-facebook-f" />
+          <font-awesome-icon icon="fa-brands fa-twitter" />
+          <font-awesome-icon icon="fa-brands fa-linkedin-in" />
+           -->
         </ul>
       </div>
 

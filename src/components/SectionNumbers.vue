@@ -42,6 +42,9 @@ export default {
     color: white;
     .container {
       text-align: center;
+      h1, .green-span{
+        color: white;
+      }
       .numbers-infos {
         padding-top: 5rem;
         justify-content: space-between;

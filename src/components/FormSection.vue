@@ -56,6 +56,9 @@ export default {
     span{
         display: block;
     }
+    .btn{
+      align-self: center;
+    }
     .transparent-btn:hover{
           background-color: rgba(0, 0, 0, 0.08);
         }

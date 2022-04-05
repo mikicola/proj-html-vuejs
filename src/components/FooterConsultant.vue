@@ -14,9 +14,10 @@
         <ul id="about">
           <li class="li-title">About</li>
           <li><a href="">prova</a></li>
+
           <li v-for="(aboutLink, index) in aboutLinks" :key="index">
-            <a :href="link.href">{{ link.text }}</a>
-          </li>
+          <a :href="aboutLink.href">{{ aboutLink.text }}</a>
+        </li>
         </ul>
       </div>
 
@@ -24,8 +25,8 @@
         <ul id="services">
           <li class="li-title">Services</li>
           <li><a href="">prova</a></li>
-          <li v-for="(ServicestLink, index) in ServicestLinks" :key="index">
-            <a :href="link.href">{{ link.text }}</a>
+          <li v-for="(servicesLink, index) in servicesLinks" :key="index">
+            <a :href="servicesLink.href">{{ servicesLink.text }}</a>
           </li>
         </ul>
       </div>
@@ -35,7 +36,7 @@
           <li class="li-title">Support</li>
           <li><a href="">prova</a></li>
           <li v-for="(supportLink, index) in supportLinks" :key="index">
-            <a :href="link.href">{{ link.text }}</a>
+            <a :href="supportLink.href">{{ supportLink.text }}</a>
           </li>
         </ul>
       </div>
@@ -53,6 +54,101 @@
 <script>
 export default {
   name: "FooterConsultant",
+    data() {
+    return {
+      aboutLinks:[
+        {
+          href: "#",
+          text: "all",
+        },
+         {
+          href: "#",
+          text: "institutional",
+        },
+         {
+          href: "#",
+          text: "social",
+        },
+         {
+          href: "#",
+          text: "events",
+        },
+         {
+          href: "#",
+          text: "innovation",
+        },
+         {
+          href: "#",
+          text: "environment",
+        },
+         {
+          href: "#",
+          text: "technology",
+        },
+      ],
+      servicesLinks:[
+        {
+          href: "#",
+          text: "all",
+        },
+         {
+          href: "#",
+          text: "institutional",
+        },
+         {
+          href: "#",
+          text: "social",
+        },
+         {
+          href: "#",
+          text: "events",
+        },
+         {
+          href: "#",
+          text: "innovation",
+        },
+         {
+          href: "#",
+          text: "environment",
+        },
+         {
+          href: "#",
+          text: "technology",
+        },
+      ],
+      supportLinks:[
+        {
+          href: "#",
+          text: "all",
+        },
+         {
+          href: "#",
+          text: "institutional",
+        },
+         {
+          href: "#",
+          text: "social",
+        },
+         {
+          href: "#",
+          text: "events",
+        },
+         {
+          href: "#",
+          text: "innovation",
+        },
+         {
+          href: "#",
+          text: "environment",
+        },
+         {
+          href: "#",
+          text: "technology",
+        },
+      ],
+      
+    };
+  },
 };
 </script>
 

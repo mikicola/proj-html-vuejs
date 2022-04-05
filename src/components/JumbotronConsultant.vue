@@ -49,6 +49,8 @@ export default {
       transform: translate(-50%, -50%);
       h1{
         color: $blue-primary-color;
+        font-size: 3.5rem;
+        font-weight: 800;
       }
       p{
         margin-top: 1rem;

@@ -12,7 +12,14 @@
         <div class="cards-info-company flex">
           <div class="card-info-company">
             <!-- icon -->
-            <h2>titolo</h2>
+            
+            <!-- TOFIX da importare -->
+            <!-- <font-awesome-icon  class="icon" icon="fa-solid fa-award" />
+            <font-awesome-icon icon="fa-solid fa-lock-keyhole" />
+            <font-awesome-icon icon="fa-solid fa-pen-to-square" />
+            <font-awesome-icon icon="fa-solid fa-graduation-cap" /> -->
+
+            <h2><font-awesome-icon class="icon" icon="fa-solid fa-share-nodes" />titolo</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
           <div class="card-info-company">
@@ -53,6 +60,7 @@ export default {
   background-color: $dark-bg-color;
   color: white;
 
+  h1,
   .green-span {
     color: white;
   }
@@ -61,22 +69,23 @@ export default {
     float: left;
     width: 50%;
   }
+
   .p-heading {
     margin-top: 1.5rem;
   }
-  .cards-info-company{
-      flex-wrap: wrap;
+  .cards-info-company {
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    .card-info-company {
       margin-top: 2rem;
-      .card-info-company{
-          margin-top: 2rem;
-          width: 50%;
-      }
+      width: 50%;
+    }
   }
-  .btn-container{
-      margin-top: 4rem;
-      .transparent-btn{
-          margin-left: 1.5rem;
-      }
+  .btn-container {
+    margin-top: 4rem;
+    .transparent-btn {
+      margin-left: 1.5rem;
+    }
   }
 }
 </style>

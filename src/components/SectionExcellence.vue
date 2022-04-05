@@ -7,22 +7,31 @@
         <div class="wrapper flex">
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
-            est illum quos consequuntur quae architecto perspiciatis, fugiat
-            dignissimos maiores omnis asperiores officiis, aliquid maxime. Dolor
+            est illum quos consequuntur quae architecto perspiciatis aliquid maxime. Dolor
             dolores voluptatum enim quidem omnis.
           </p>
 
           <a class="btn green-btn" href="#">see all</a>
-          <!-- TOFIX allargare il testo  -->
         </div>
       </div>
 
       <div class="cards_section-excellence flex">
         <div class="card_section-excellence flex">
           <!-- icon  -->
-          <font-awesome-icon class="icon" icon="fa-solid fa-user-secret" />
+          <!-- <font-awesome-icon class="icon" icon="fa-solid fa-user-secret" /> -->
+          <font-awesome-icon class="icon" icon="fa-solid fa-share-nodes" />
+          
+            <!-- TOFIX da importare -->
+          <!-- <font-awesome-icon class="icon" icon="fa-solid fa-suitcase" />
+          <font-awesome-icon icon="fa-solid fa-chart-simple" />
+          <font-awesome-icon icon="fa-solid fa-plane" />
+          <font-awesome-icon icon="fa-solid fa-globe-stand" />
+          <font-awesome-icon icon="fa-solid fa-inbox" /> -->
+
+          <i class="fa-solid fa-share-nodes"></i>
+
           <!-- icon arrow  -->
-          <font-awesome-icon class="arrow-icon" icon="fa-solid fa-user-secret" />
+          <font-awesome-icon class="arrow-icon" icon="fa-solid fa-arrow-right" />
           <h2>titolo</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
@@ -47,9 +56,12 @@ export default {
   }
   .wrapper {
     justify-content: space-between;
+    // align-content: center;
   }
   .btn {
-    display: inline;
+    align-self: end;
+    display: block;
+    white-space: nowrap
   }
     .cards_section-excellence{
         padding-top: 2rem;
@@ -62,13 +74,22 @@ export default {
           flex-direction: column;
           position: relative;
           .icon{
-              align-self: start;
+            align-self: start;
+            font-size: 2.5rem;
+            color: $green-color;
           }
           .arrow-icon{
-                position: absolute;
-                right: 3rem;
+            position: absolute;
+            right: 3rem;
+            font-size: 1.5rem;
+            color: rgba(3, 132, 132, 0.5);
+            cursor: pointer;
+            &:hover{
+              color: $green-color;
+            }
           }
           h2{
+              color: $blue-primary-color;
               margin-top: 1rem;
           }
           h2,

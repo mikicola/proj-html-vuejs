@@ -24,6 +24,10 @@ export default {
 <style lang="scss">
 @import "./assets/styles/style.scss";
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  // ExtraLight 200
+  // Regular 400
+  // Medium 500
+  // ExtraBold 800
 }
 </style>
