@@ -23,6 +23,7 @@ export default {
   .number {
     color: $small-title-color;
     font-size: 3rem;
+    font-weight: 600;
   }
 }
 </style>

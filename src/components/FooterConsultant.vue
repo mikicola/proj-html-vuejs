@@ -1,20 +1,16 @@
 <template>
   <footer>
     <div class="container padding-x-5 flex">
-      <div class="column">
+      <div class="column one flex">
         <img src="../assets/img/logo.png" alt="logo nex gen" />
         <p>A Functional HTML Template for Corporate & Business.</p>
-        <span>11111111</span>
-        <span>11111111</span>
-        <span>11111111</span>
+        <span v-for="(item, index) in contactInfo" :key="index">{{ item.text }}</span>
         <button class="btn transparent-btn">get in touch</button>
       </div>
 
       <div class="column card-foo">
         <ul id="about">
           <li class="li-title">About</li>
-          <li><a href="">prova</a></li>
-
           <li v-for="(aboutLink, index) in aboutLinks" :key="index">
           <a :href="aboutLink.href">{{ aboutLink.text }}</a>
         </li>
@@ -24,7 +20,6 @@
       <div class="column card-foo">
         <ul id="services">
           <li class="li-title">Services</li>
-          <li><a href="">prova</a></li>
           <li v-for="(servicesLink, index) in servicesLinks" :key="index">
             <a :href="servicesLink.href">{{ servicesLink.text }}</a>
           </li>
@@ -44,7 +39,7 @@
     <div class="footer-bottom">
       <div class="container flex">
         <span>Enjoy the low prices</span>
-        <span>2020 NEXGEN is Proudly powered by <span>Codings</span></span>
+        <span>&copy;2020 NEXGEN is Proudly powered by <span class="green-span-footer">Codings</span>.</span>
       </div>
     </div>
   </footer>
@@ -55,97 +50,100 @@ export default {
   name: "FooterConsultant",
     data() {
     return {
+      contactInfo: [
+        {
+          icon: "",
+          text: "+1(305)1234-5678",
+        },
+        {
+          icon: "",
+          text: "hello@example.com",
+        },
+          {
+            icon: "",
+            text: "Main Avenue, 987",
+          },
+      ],
       aboutLinks:[
         {
           href: "#",
-          text: "all",
+          text: "> The Company",
         },
          {
           href: "#",
-          text: "institutional",
+          text: "> Institutional",
         },
          {
           href: "#",
-          text: "social",
+          text: "> Social",
         },
          {
           href: "#",
-          text: "events",
+          text: "> Innovation",
         },
          {
           href: "#",
-          text: "innovation",
+          text: "> Environment",
         },
          {
           href: "#",
-          text: "environment",
-        },
-         {
-          href: "#",
-          text: "technology",
+          text: "> Technology",
         },
       ],
       servicesLinks:[
         {
           href: "#",
-          text: "all",
+          text: "> Audit & Assurance",
         },
          {
           href: "#",
-          text: "institutional",
+          text: "> Financial Advisory",
         },
          {
           href: "#",
-          text: "social",
+          text: "> Analitics M&A",
         },
          {
           href: "#",
-          text: "events",
+          text: "> Middle Marketing",
         },
          {
           href: "#",
-          text: "innovation",
+          text: "> Legal Consulting",
         },
          {
           href: "#",
-          text: "environment",
-        },
-         {
-          href: "#",
-          text: "technology",
+          text: "> Regular Risk",
         },
       ],
       supportLinks:[
         {
           href: "#",
-          text: "all",
+          text: "> Responsability",
         },
          {
           href: "#",
-          text: "institutional",
+          text: "> Terms of Use",
         },
          {
           href: "#",
-          text: "social",
+          text: "> About Cookies",
         },
          {
           href: "#",
-          text: "events",
+          text: "> Privacy",
         },
          {
           href: "#",
-          text: "innovation",
+          text: "> Accessibility",
         },
          {
           href: "#",
-          text: "environment",
+          text: "> Information",
         },
-         {
-          href: "#",
-          text: "technology",
-        },
+
       ],
-      
+
     };
   },
 };
@@ -158,6 +156,10 @@ footer {
   color: white;
   .container {
     justify-content: space-between;
+    .one{
+      flex-direction: column;
+      justify-content: space-between;
+    }
     .column {
       width: calc(25% - 1rem);
       margin: 0.5rem;
@@ -166,9 +168,11 @@ footer {
       }
       span {
         display: block;
+        color: #6d6d6d;
       }
       .transparent-btn {
         color: white;
+        align-self: flex-start;
       }
     }
     .card-foo {
@@ -198,6 +202,9 @@ footer {
     font-size: .8em;
     justify-content: space-between;
     padding: 2rem 0;
+    .green-span-footer{
+      color: $green-color;
+    }
   }
 }
 </style>

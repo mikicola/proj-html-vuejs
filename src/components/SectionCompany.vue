@@ -8,35 +8,20 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Reprehenderit, soluta! Doloremque cum cupiditate nihil.
         </p>
-
+<!-- <font-awesome-icon  class="icon" icon="fa-solid fa-award" />
+    <font-awesome-icon icon="fa-solid fa-lock-keyhole" />
+    <font-awesome-icon icon="fa-solid fa-pen-to-square" />
+    <font-awesome-icon icon="fa-solid fa-graduation-cap" /> -->
         <div class="cards-info-company flex">
-          <div class="card-info-company">
-            <!-- icon -->
-            
-            <!-- TOFIX da importare -->
-            <!-- <font-awesome-icon  class="icon" icon="fa-solid fa-award" />
-            <font-awesome-icon icon="fa-solid fa-lock-keyhole" />
-            <font-awesome-icon icon="fa-solid fa-pen-to-square" />
-            <font-awesome-icon icon="fa-solid fa-graduation-cap" /> -->
 
-            <h2><font-awesome-icon class="icon" icon="fa-solid fa-share-nodes" />titolo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-          <div class="card-info-company">
-            <!-- icon -->
-            <h2>titolo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-          <div class="card-info-company">
-            <!-- icon -->
-            <h2>titolo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-          <div class="card-info-company">
-            <!-- icon -->
-            <h2>titolo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
+          <CardCompany
+          v-for="dataCompany in arrDataCompanies"
+          :key="dataCompany"
+          :card-icon="dataCompany.icon"
+          :card-title="dataCompany.title"
+          :card-para="dataCompany.para"
+            />
+
         </div>
         <div class="btn-container">
           <a class="btn green-btn" href="#">get in touch</a>
@@ -49,8 +34,39 @@
 </template>
 
 <script>
+import CardCompany from "./cards/CardCompany.vue";
+
 export default {
   name: "SectionCompany",
+   components: {
+    CardCompany,
+  },
+   data() {
+    return {
+      arrDataCompanies: [
+        {
+          icon: "fa-award",
+          title: "Tradition",
+          para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          icon: "fa-solid fa-award",
+          title: "Security",
+          para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          icon: "fa-solid fa-award",
+          title: "Certificate",
+          para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          icon: "fa-solid fa-award",
+          title: "Expertise",
+          para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+      ]
+    }
+  }
 };
 </script>
 
@@ -76,10 +92,10 @@ export default {
   .cards-info-company {
     flex-wrap: wrap;
     margin-top: 2rem;
-    .card-info-company {
-      margin-top: 2rem;
-      width: 50%;
-    }
+    // .card-info-company {
+    //   margin-top: 2rem;
+    //   width: 50%;
+    // }
   }
   .btn-container {
     margin-top: 4rem;

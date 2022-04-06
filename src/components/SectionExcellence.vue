@@ -15,34 +15,69 @@
         </div>
       </div>
 
-      <div class="cards_section-excellence flex">
-        <div class="card_section-excellence flex">
-          <!-- icon  -->
-          <!-- <font-awesome-icon class="icon" icon="fa-solid fa-user-secret" /> -->
-          <font-awesome-icon class="icon" icon="fa-solid fa-share-nodes" />
-          
-            <!-- TOFIX da importare -->
+
           <!-- <font-awesome-icon class="icon" icon="fa-solid fa-suitcase" />
           <font-awesome-icon icon="fa-solid fa-chart-simple" />
           <font-awesome-icon icon="fa-solid fa-plane" />
           <font-awesome-icon icon="fa-solid fa-globe-stand" />
           <font-awesome-icon icon="fa-solid fa-inbox" /> -->
-
-          <i class="fa-solid fa-share-nodes"></i>
-
-          <!-- icon arrow  -->
-          <font-awesome-icon class="arrow-icon" icon="fa-solid fa-arrow-right" />
-          <h2>titolo</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
+      <div class="cards_section-excellence flex">
+        <CardExcellence
+        v-for="dataExcellence in arrDataExcellences"
+        :key="dataExcellence"
+        :data-icon="dataExcellence.icon"
+        :card-title="dataExcellence.title"
+        :card-para="dataExcellence.para"
+         />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import CardExcellence from "./cards/CardExcellence.vue";
 export default {
   name: "SectionExcellence",
+  components: {
+
+    CardExcellence,
+  },
+  data() {
+    return {
+      arrDataExcellences: [
+        {
+          icon: "fa-solid fa-suitcase",
+          title: "Audit & Assurance",
+          para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          icon: "fa-solid fa-suitcase",
+          title: "Financial Advisory",
+          para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          icon: "fa-solid fa-suitcase",
+          title: "Analytics and M&A",
+          para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          icon: "fa-solid fa-suitcase",
+          title: "Middle Marketing",
+          para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          icon: "fa-solid fa-suitcase",
+          title: "Legal Consulting",
+          para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          icon: "fa-solid fa-suitcase",
+          title: "Regular Risk",
+          para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+      ]
+    }
+  }
 };
 </script>
 
@@ -65,38 +100,7 @@ export default {
   }
     .cards_section-excellence{
         padding-top: 2rem;
-        .card_section-excellence {
-          width: calc(33.3333% - 10px);
-          margin: 5px;
-          padding: 2rem;
-          border-radius: 10px;
-          background-color: white;
-          flex-direction: column;
-          position: relative;
-          .icon{
-            align-self: start;
-            font-size: 2.5rem;
-            color: $green-color;
-          }
-          .arrow-icon{
-            position: absolute;
-            right: 3rem;
-            font-size: 1.5rem;
-            color: rgba(3, 132, 132, 0.5);
-            cursor: pointer;
-            &:hover{
-              color: $green-color;
-            }
-          }
-          h2{
-              color: $blue-primary-color;
-              margin-top: 1rem;
-          }
-          h2,
-          p {
-            display: block;
-          }
-        }
+        flex-wrap: wrap;
     }
 }
 </style>

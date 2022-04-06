@@ -28,7 +28,7 @@
     </div>
 
     <div class="logos container padding-x-5 flex">
-      <img src="../assets/img/logo-1.png" alt="" />
+      <img v-for="(logo, index) in arrLogos" :key="index" :src="logo.src" alt="logo" />
     </div>
   </div>
 </template>
@@ -61,6 +61,23 @@ export default {
           info: "Countries",
         },
       ],
+      arrLogos:[
+        {
+         src: require("../assets/img/logo-1.png")
+        },
+        {
+         src: require("../assets/img/logo-2.png")
+        },
+        {
+         src: require("../assets/img/logo-3.png")
+        },
+        {
+         src: require("../assets/img/logo-4.png")
+        },
+        {
+         src: require("../assets/img/logo-5.png")
+        },
+      ]
     };
   },
 };
