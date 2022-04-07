@@ -1,7 +1,7 @@
 <template>
   <div class="card-info-company">
     <h2>
-      <font-awesome-icon class="icon" icon="fa-solid + cardIcon" />
+      <font-awesome-icon class="icon" :icon="cardIcon" />
       {{
         cardTitle
       }}
@@ -14,7 +14,7 @@
 export default {
   name: "CardCompany",
   props: {
-    cardIcon:String,
+    cardIcon: String,
     cardTitle: String,
     cardPara: String,
   },
@@ -26,5 +26,9 @@ export default {
 .card-info-company {
   margin-top: 2rem;
   width: 50%;
+  .icon{
+    color: $green-color;
+    padding-right: .5rem;
+  }
 }
 </style>

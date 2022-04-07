@@ -16,16 +16,11 @@
       </div>
 
 
-          <!-- <font-awesome-icon class="icon" icon="fa-solid fa-suitcase" />
-          <font-awesome-icon icon="fa-solid fa-chart-simple" />
-          <font-awesome-icon icon="fa-solid fa-plane" />
-          <font-awesome-icon icon="fa-solid fa-globe-stand" />
-          <font-awesome-icon icon="fa-solid fa-inbox" /> -->
       <div class="cards_section-excellence flex">
         <CardExcellence
         v-for="dataExcellence in arrDataExcellences"
         :key="dataExcellence"
-        :data-icon="dataExcellence.icon"
+        :card-icon="dataExcellence.icon"
         :card-title="dataExcellence.title"
         :card-para="dataExcellence.para"
          />
@@ -45,8 +40,13 @@ export default {
   data() {
     return {
       arrDataExcellences: [
+        // <font-awesome-icon class="icon" icon="fa-solid fa-suitcase" />
+        // <font-awesome-icon icon="fa-solid fa-chart-simple" />
+        // <font-awesome-icon icon="fa-solid fa-plane" />
+        // <font-awesome-icon icon="fa-solid fa-globe-stand" />
+        // <font-awesome-icon icon="fa-solid fa-inbox" />
         {
-          icon: "fa-solid fa-suitcase",
+          icon: "fa-solid fa-share-nodes",
           title: "Audit & Assurance",
           para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
@@ -56,22 +56,23 @@ export default {
           para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
         {
-          icon: "fa-solid fa-suitcase",
+          icon: "fa-solid fa-chart-simple",
           title: "Analytics and M&A",
           para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
         {
-          icon: "fa-solid fa-suitcase",
+          icon: "fa-solid fa-plane",
           title: "Middle Marketing",
           para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
         {
+          // icon globe non funziona
           icon: "fa-solid fa-suitcase",
           title: "Legal Consulting",
           para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
         {
-          icon: "fa-solid fa-suitcase",
+          icon: "fa-solid fa-inbox",
           title: "Regular Risk",
           para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },

@@ -1,6 +1,6 @@
 <template>
   <div class="card_section-excellence flex">
-    <font-awesome-icon class="icon" :icon="dataIcon" />
+    <font-awesome-icon class="icon" :icon="cardIcon" />
     <font-awesome-icon class="arrow-icon" icon="fa-solid fa-arrow-right" />
     <h2>{{ cardTitle }}</h2>
     <p>{{ cardPara }}</p>
@@ -11,6 +11,7 @@
 export default {
   name: 'CardExcellence',
   props: {
+    cardIcon: String,
     cardTitle: String,
     cardPara: String
   },
@@ -30,7 +31,7 @@ export default {
   position: relative;
     .icon{
       align-self: start;
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: $green-color;
     }
     .arrow-icon{

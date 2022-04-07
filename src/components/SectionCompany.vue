@@ -8,10 +8,7 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Reprehenderit, soluta! Doloremque cum cupiditate nihil.
         </p>
-<!-- <font-awesome-icon  class="icon" icon="fa-solid fa-award" />
-    <font-awesome-icon icon="fa-solid fa-lock-keyhole" />
-    <font-awesome-icon icon="fa-solid fa-pen-to-square" />
-    <font-awesome-icon icon="fa-solid fa-graduation-cap" /> -->
+
         <div class="cards-info-company flex">
 
           <CardCompany
@@ -43,24 +40,26 @@ export default {
   },
    data() {
     return {
+
       arrDataCompanies: [
         {
-          icon: "fa-award",
+          icon: "fa-solid fa-award",
           title: "Tradition",
           para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
         {
-          icon: "fa-solid fa-award",
+          icon: "fa-solid fa-pen-to-square",
+          // icon: "fa-solid fa-lock-keyhole", non funziona
           title: "Security",
           para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
         {
-          icon: "fa-solid fa-award",
+          icon: "fa-solid fa-pen-to-square",
           title: "Certificate",
           para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
         {
-          icon: "fa-solid fa-award",
+          icon: "fa-solid fa-graduation-cap",
           title: "Expertise",
           para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
